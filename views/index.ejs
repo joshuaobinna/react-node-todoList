@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Todo App</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container">
+          <h1>A simple Todo App</h1>
+          <form action="/newtodo" method="POST">
+             <div class="input-group">
+                 <input type="text" class="form-control" name="item" placeholder="Enter todo item">
+                 <span>
+                     <button type="submit" class="button">Submit</button>
+                 </span>
+             </div>
+          </form>
+      </div>
+
+      <div>
+          <h2>Added Task</h2>
+          <ul>
+             <% for(let i = 0; i < todoList.length; i++) { %>
+              <li> <%= todoList[i] %></li>
+             <% } %>
+          </ul>
+      </div>
+    </body>
+</html>
